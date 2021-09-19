@@ -27,6 +27,14 @@
 
     <!-- ? Custom JavaScript -->
     <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.statistic').counterUp({
+                delay: 10,
+                time: 3000
+            });
+        });
+    </script>
     <!-- ? Custom JavaScript -->
 
     <!-- ? Title -->
@@ -88,17 +96,18 @@
             <li class="dropdown">
                 <a href="products.html" class="dropbtn">المنتجات<i class="fas fa-sort-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="#">الدهانات الانشائية</a>
-                    <a href="#">الدهانات الانشائية</a>
-                    <a href="#">الدهانات الانشائية</a>
+                    <a href="construction_paints.html">الدهانات الانشائية</a>
+                    <a href="construction_paints.html">الدهانات الانشائية</a>
+                    <a href="construction_paints.html">الدهانات الانشائية</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="discover.html" class="dropbtn">اكتشف<i class="fas fa-sort-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="#">الدهانات الانشائية</a>
-                    <a href="#">الدهانات الانشائية</a>
-                    <a href="#">الدهانات الانشائية</a>
+                    <a href="#">عائلة الالوان</a>
+                    <a href="#">الموزعين المعتمدين</a>
+                    <a href="#">المشاريع</a>
+                    <a href="#">أستديو الألوان</a>
                 </div>
             </li>
             <li><a href="application.html">التطبيق</a></li>
@@ -120,12 +129,15 @@
     </nav>
     <!-- =========== ? NavBar =========== -->
 
-    <!-- =========== ? About =========== -->
-    <section class="about">
-        <div class="container">
-            <h1>من نحن</h1>
-            <p>تعرف علي قصتنا نحو النجاح , مميزات الشركة و خدماتها ,اولويتانا اهدفنا و فريق عملنا الناجح </p>
-            <span>الرئيسية > من نحن</span>
+    <!-- =========== ? breadcrumb =========== -->
+    <section class="breadcrumb">
+        <div class="container-fluid p-0">
+            <img src="media/image/about.jpg" alt="breadcrumb">
+            <div class="text-breadcrumb">
+                <h1>من نحن</h1>
+                <p>تعرف علي قصتنا نحو النجاح , مميزات الشركة و خدماتها ,اولويتانا اهدفنا و فريق عملنا الناجح </p>
+                <span>الرئيسية > من نحن</span>
+            </div>
         </div>
     </section>
     <!-- =========== ? About =========== -->
@@ -263,10 +275,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <iframe width="100%" src="https://www.youtube.com/embed/wYd3e7WxYRQ"
+                        <!-- <iframe width="100%" src="https://www.youtube.com/embed/wYd3e7WxYRQ"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
@@ -344,6 +356,92 @@
         </div>
     </section>
     <!-- =========== ? Why =========== -->
+
+    <!-- =========== ? Team =========== -->
+    <section class="team">
+        <div class="container">
+            <p class="head_text">فريق عملنا</p>
+            <h2>تعرف علي فريق عملنا</h2>
+            <!-- Swiper -->
+            <div class="swiper-container team_Swiper">
+                <div class="swiper-wrapper">
+                    <!-- ===== card_team ===== -->
+                    <div class="swiper-slide">
+                        <div class="card_team">
+                            <img src="media/image/team/team1.jpg" alt="team">
+                            <h6>عامر فتحي عبد الله</h6>
+                            <p>رئيس مجلس الإداره</p>
+                        </div>
+                    </div>
+                    <!-- ===== card_team ===== -->
+
+                    <!-- ===== card_team ===== -->
+                    <div class="swiper-slide">
+                        <div class="card_team">
+                            <img src="media/image/team/team2.jpg" alt="team">
+                            <h6>اسلام احمد عبد الله</h6>
+                            <p>مدير المصنع</p>
+                        </div>
+                    </div>
+                    <!-- ===== card_team ===== -->
+
+                    <!-- ===== card_team ===== -->
+                    <div class="swiper-slide">
+                        <div class="card_team">
+                            <img src="media/image/team/team3.jpg" alt="team">
+                            <h6>حسين عبد الغفار علي</h6>
+                            <p>المدير التنفيذي</p>
+                        </div>
+                    </div>
+                    <!-- ===== card_team ===== -->
+
+                    <!-- ===== card_team ===== -->
+                    <div class="swiper-slide">
+                        <div class="card_team">
+                            <img src="media/image/team/team4.jpg" alt="team">
+                            <h6>حسام حسن أحمد</h6>
+                            <p>مدير المبيعات</p>
+                        </div>
+                    </div>
+                    <!-- ===== card_team ===== -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".team_Swiper", {
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    spaceBetween: 30,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            loopFillGroupWithBlank: false,
+                        },
+
+                        768: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                            loopFillGroupWithBlank: false,
+                        },
+
+                        1024: {
+                            slidesPerView: 4,
+                            slidesPerGroup: 4,
+                            loopFillGroupWithBlank: true,
+                        },
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            </script>
+        </div>
+    </section>
+    <!-- =========== ? Team =========== -->
 
     <!-- =========== ? partners =========== -->
     <section class="partners">
@@ -535,6 +633,52 @@
     </section>
     <!-- =========== ? partners =========== -->
 
+    <!-- =========== ? counter =========== -->
+    <section class="counter">
+        <div class="container">
+            <!-- ===== counter-static ===== -->
+            <div class="counter-static">
+                <div class="img-counter">
+                    <img src="media/image/icon/color.png" alt="img-counter">
+                </div>
+                <h2 class="statistic">90</h2>
+                <p>مراكز التلوين</p>
+            </div>
+            <!-- ===== counter-static ===== -->
+
+            <!-- ===== counter-static ===== -->
+            <div class="counter-static">
+                <div class="img-counter">
+                    <img src="media/image/icon/color.png" alt="img-counter">
+                </div>
+                <h2 class="statistic">90</h2>
+                <p>مراكز التلوين</p>
+            </div>
+            <!-- ===== counter-static ===== -->
+
+            <!-- ===== counter-static ===== -->
+            <div class="counter-static">
+                <div class="img-counter">
+                    <img src="media/image/icon/color.png" alt="img-counter">
+                </div>
+                <h2 class="statistic">80</h2>
+                <p>مراكز التلوين</p>
+            </div>
+            <!-- ===== counter-static ===== -->
+
+            <!-- ===== counter-static ===== -->
+            <div class="counter-static">
+                <div class="img-counter">
+                    <img src="media/image/icon/color.png" alt="img-counter">
+                </div>
+                <h2 class="statistic">60</h2>
+                <p>مراكز التلوين</p>
+            </div>
+            <!-- ===== counter-static ===== -->
+        </div>
+    </section>
+    <!-- =========== ? counter =========== -->
+
     <!-- ? ======= footer =========== -->
     <footer>
         <div class="container">
@@ -643,6 +787,10 @@
             </div>
         </div>
     </footer>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.5/countUp.min.js"></script>
     <!-- ? ======= footer =========== -->
 
     <script src="js/main.js"></script>
