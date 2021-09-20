@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/hover-min.css" />
     <link rel="stylesheet" href="css/easyzoom.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
     <!-- ? Custom CSS -->
 
     <!-- ? Main JavaScript -->
@@ -29,6 +30,7 @@
     <!-- ? Custom JavaScript -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/easyzoom.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
     <!-- ? Custom JavaScript -->
 
     <!-- ? Title -->
@@ -139,6 +141,7 @@
     <section class="single_product">
         <div class="container">
             <div class="row">
+                <!-- description_product -->
                 <div class="col-lg-5 col-md-12">
                     <h1 class="name_product">بلاستيك ربع مائي</h1>
                     <span>وصف المنتج</span>
@@ -235,33 +238,34 @@
                         </ul>
                     </div>
                 </div>
+                <!-- description_product -->
+
+                <!-- images product -->
                 <div class="col-lg-7 col-md-12">
-
                     <!-- Swiper -->
-
                     <div class="swiper-container main_product_swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img src="media/image/product/product1.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                <img src="media/image/product/product2.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                <img src="media/image/product/product3.jpg" />
                             </div>
                         </div>
                     </div>
                     <div thumbsSlider="" class="swiper-container small_product_swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img src="media/image/product/product1.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                <img src="media/image/product/product2.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                <img src="media/image/product/product3.jpg" />
                             </div>
                         </div>
                     </div>
@@ -270,12 +274,19 @@
                 <!-- Initialize Swiper -->
                 <script>
                     var swiper = new Swiper(".small_product_swiper", {
-                        loop: true,
-                        direction: "vertical",
                         spaceBetween: 10,
                         slidesPerView: 5,
                         freeMode: true,
                         watchSlidesProgress: true,
+                        breakpoints: {
+                            300: {
+                                direction: "horzintal",
+                            },
+
+                            768: {
+                                direction: "vertical",
+                            },
+                        },
                     });
                     var swiper2 = new Swiper(".main_product_swiper", {
                         loop: true,
@@ -286,11 +297,315 @@
                         },
                     });
                 </script>
+                <!-- images product -->
+
+
+                <!-- Specifications product -->
+                <div class="col-sm-12">
+                    <div class="specifications_product">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <!-- specifications button -->
+                            <button class="nav-link active" id="nav-specifications-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-specifications" type="button" role="tab"
+                                aria-controls="nav-specifications" aria-selected="true">المواصفات الفنية</button>
+                            <!-- specifications button -->
+
+                            <!-- instructions button -->
+                            <button class="nav-link" id="nav-instructions-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-instructions" type="button" role="tab"
+                                aria-controls="nav-instructions" aria-selected="false">تعليمات الاستخدام</button>
+                            <!-- instructions button -->
+
+                            <!-- quantity button -->
+                            <button class="nav-link" id="nav-quantity-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-quantity" type="button" role="tab" aria-controls="nav-quantity"
+                                aria-selected="false">أحسب كميتك</button>
+                            <!-- quantity button -->
+
+                            <!-- inquiry button -->
+                            <button class="nav-link" id="nav-inquiry-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-inquiry" type="button" role="tab" aria-controls="nav-inquiry"
+                                aria-selected="false">أرسل أستفسارك</button>
+                            <!-- inquiry button -->
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <!-- specifications content -->
+                            <div class="tab-pane fade show active" id="nav-specifications" role="tabpanel"
+                                aria-labelledby="nav-specifications-tab">
+                                <p class="specifications_text">مواصفات المنتج</p>
+                                <table class="table caption-top">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">المظهر النهائى</th>
+                                            <td>لامع</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">اللون</th>
+                                            <td>متوفر باللون الأبيض وأساسات التلوين بالكمبيوتر(A. B , C)
+                                                (أكثر من 2000 لون حسب نظام دلتا كاستيلو للتلوين بالكمبيوتر)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">الكثافة</th>
+                                            <td>1.33 ± 0.05جم/ سم3 للون الأبيض</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">اللزوجة Ku</th>
+                                            <td>120±2 عند درجة حرارة 25مo للون الأبيض</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">المحتوى الصلب بالكجم %</th>
+                                            <td>58%±2</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">قابلية الغسيل (مقاومة الإحتكاك المبتل)</th>
+                                            <td>حتى 20000 دورة على جهاز الغسيل</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">المذيب التخفيف</th>
+                                            <td>الماء</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">زمن الجفاف عند 25مo
+                                                ورطوبة 50%</th>
+                                            <td>جفاف الوجه الاول للمس 30 دقيقة
+                                                جفاف الوجه الثانى للمس 2 – 4 ساعة
+                                                جفاف نهائى 24 ساعة </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- specifications content -->
+
+                            <!-- instructions content -->
+                            <div class="tab-pane fade" id="nav-instructions" role="tabpanel"
+                                aria-labelledby="nav-instructions-tab">
+                                <p> يجب مراعاة ان يكون السطح المراد دهانه نظيفا وجافاً وخالى من الشحومات والزيوت
+                                    والاتربة والأجزاء الغير متماسكة.
+                                    في حالة دهان الأسطح القديمة او المدهونة سابقا يجب إزالة الأجزاء الغير متماسكة أو
+                                    الجيرية قبل البدأ في الدهان.
+                                    يفضل دهان وجه واحد من ستوب سيلر لضمان عدم وجود اى اجزاء غير متماسكة كما انه يساعد
+                                    على قوة الالتصاق وزيادة الفرد وسهولة الإستخدام.
+                                    يتم دهان وجه واحد كبطانة من دلتا اكريلك 707 مط (يفضل دهانه بنفس لون الوجه الاخير)
+                                    يخفف الوجه الاول من من التراشاين ربع لامع بعد تقليب المنتج تقليباً جيداً بنسبة لا
+                                    تزيد عن 10%.
+                                    يراعي ان يكون الفارق الزمني بين الوجهين لا يقل عن 6 ساعات وكلما زاد عن ذلك كان افضل
+                                    .
+                                    أدوات التطبيق: يتم تطبيق المنتج علي الاسطح باستخدام الرولة أو الفرشاة او مسدس الرش.
+                                    معدل الفرد النظري : 10 – 15م2/ لتر.
+                                    يعتمد هذا المعدل على نوع السطح من حيث التجهيز والمسامية ودرجة تخفيف المنتج وسمك طبقة
+                                    الدهان
+
+                                    العبوات : جالون2.25 لتر – بستلة 9 لتر للون الأبيض.
+                                    اساسات التلوين بالكومبيوتر : يتوافر منه اساسات تلوين بالكومبيوتر A, B, C
+                                    الصلاحية : 18 شهر من تاريخ الانتاج.</p>
+                                <h6>للحصول على المنتج سليم خلال هذه الفترة يجب أن يكون التخزين فى العبوات الأصلية
+                                    محكمة الغلق في مكان بارد جاف ذو تهوية جيدة وبعيدا عن اشعة الشمس المباشرة</h6>
+                            </div>
+                            <!-- instructions content -->
+
+                            <!-- quantity content -->
+                            <div class="tab-pane fade" id="nav-quantity" role="tabpanel"
+                                aria-labelledby="nav-quantity-tab">
+                                <form action="" class="personal_info quantity_info">
+                                    <span>أحسب كمية الدهان المطلوبة</span>
+                                    <div class="row w-100">
+                                        <div class="col-lg-8 col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-12 my-2">
+                                                    <div class="form-group">
+                                                        <label for="">نوع الدهان</label>
+                                                        <i class="fas fa-paint-roller"></i>
+                                                        <select name="" id="" class="selectpicker form-control"
+                                                            title="نوع الدهان">
+                                                            <option value="">بلاستيك ربع لامع</option>
+                                                            <option value="">بلاستيك لامع</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-12 my-2">
+                                                    <div class="form-group">
+                                                        <label for="">طول الحائط</label>
+                                                        <i class="fas fa-ruler"></i>
+                                                        <input type="number" name="" id="" class="form-control"
+                                                            placeholder="أدخل طول الحائط">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-12 my-2">
+                                                    <div class="form-group">
+                                                        <label for="">ارتفاع الحائط</label>
+                                                        <i class="fas fa-ruler-combined"></i>
+                                                        <input type="number" name="" id="" class="form-control"
+                                                            placeholder="أدخل ارتفاع الحائط">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-12 my-2">
+                                                    <div class="form-group">
+                                                        <label for="">عدد الابواب</label>
+                                                        <i class="fas fa-door-closed"></i>
+                                                        <input type="number" name="" id="" class="form-control"
+                                                            placeholder="أدخل عدد الابواب">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-12 my-2">
+                                                    <div class="form-group">
+                                                        <label for="">عدد الشبابيك</label>
+                                                        <i class="fab fa-windows"></i>
+                                                        <input type="number" name="" id="" class="form-control"
+                                                            placeholder="أدخل عدد الشبابيك">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 my-2">
+                                                    <button type="submit" class="btn">احسب</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-12 d-flex align-items-center">
+                                            <div class="painted">
+                                                <i class="fas fa-paint-roller"></i>
+                                                <p>يلزم لدهان هذا الحائط</p>
+                                                <h1>3 Kg</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- quantity content -->
+
+                            <!-- inquiry content -->
+                            <div class="tab-pane fade" id="nav-inquiry" role="tabpanel"
+                                aria-labelledby="nav-inquiry-tab">
+                                <form action="" class="personal_info">
+                                    <span>أرسل استفسارك حول المنتج و سنتواصل معك قريبا</span>
+                                    <div class="row">
+                                        <div class="col-sm-12 my-2">
+                                            <div class="form-group">
+                                                <label for="">الاسم الشخصي</label>
+                                                <input type="text" name="" id="" class="form-control"
+                                                    placeholder="أدخل أسمك الشخصي">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 my-2">
+                                            <div class="form-group">
+                                                <label for="">رقم الموبيل</label>
+                                                <input type="text" name="" id="" class="form-control"
+                                                    placeholder="أدخل رقم الموبيل">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 my-2">
+                                            <div class="form-group">
+                                                <label for="">البريد الالكتروني</label>
+                                                <input type="email" name="" id="" class="form-control"
+                                                    placeholder="أدخل البريد الالكتروني">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 my-2">
+                                            <div class="form-group">
+                                                <label for="">أستفسارك</label>
+                                                <textarea name="" id="" cols="30" rows="10" class="form-control"
+                                                    placeholder="أترك أستفسارك هنا"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn">أرسال</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- inquiry content -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Specifications product -->
             </div>
-        </div>
         </div>
     </section>
     <!-- =========== ? Single product =========== -->
+
+    <!-- =========== ? related product =========== -->
+    <section class="related_product">
+        <div class="container">
+            <h2>منتجات مشابهة</h2>
+            <!-- Swiper -->
+            <div class="swiper-container related_product_Swiper">
+                <div class="swiper-wrapper">
+                    <!-- product_card -->
+                    <div class="swiper-slide">
+                        <div class="product_card">
+                            <img src="media/image/product/product1.jpg" alt="product">
+                            <h5>بلاستيك ربع لامع</h5>
+                            <p>وصف المنتج : . التراشاين ربع لامع هو دهان بلاستيك مائى عالى الجودة ذو أساس اكريليك يعطي
+                                مظهر نهائى رائع مناسب للتشطيبات الراقية. . للاستخدام الداخلى والخارجى . يعطي طبقة مرنة
+                                ومقاومة للغسيل...</p>
+                            <a href="single_product.html" class="btn">عرض المزيد</a>
+                        </div>
+                    </div>
+                    <!-- product_card -->
+
+                    <!-- product_card -->
+                    <div class="swiper-slide">
+                        <div class="product_card">
+                            <img src="media/image/product/product2.jpg" alt="product">
+                            <h5>بلاستيك ربع لامع</h5>
+                            <p>وصف المنتج : . التراشاين ربع لامع هو دهان بلاستيك مائى عالى الجوعطي طبقة مرنة
+                                ومقاومة للغسيل...</p>
+                            <a href="single_product.html" class="btn">عرض المزيد</a>
+                        </div>
+                    </div>
+                    <!-- product_card -->
+
+                    <!-- product_card -->
+                    <div class="swiper-slide">
+                        <div class="product_card">
+                            <img src="media/image/product/product3.jpg" alt="product">
+                            <h5>بلاستيك ربع لامع</h5>
+                            <p>وصف المنتج : . التراشاين ربع لامع هو دهان بلاستيك مائى عالى الجودة ذو أساس اكريليك يعطي
+                                مظهر نهائى رائع مناسب للتشطيبات الراقية. . للاستخدام الداخلى والخارجى . يعطي طبقة مرنة
+                                ومقاومة للغسيل...</p>
+                            <a href="single_product.html" class="btn">عرض المزيد</a>
+                        </div>
+                    </div>
+                    <!-- product_card -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <script>
+                $(".related_product .product_card p").text(function (index, currentText) {
+                    return currentText.substr(0, 260);
+                });
+            </script>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".related_product_Swiper", {
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    spaceBetween: 30,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            loopFillGroupWithBlank: false,
+                        },
+
+                        768: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                            loopFillGroupWithBlank: false,
+                        },
+
+                        1024: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 3,
+                            loopFillGroupWithBlank: true,
+                        },
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            </script>
+        </div>
+    </section>
+    <!-- =========== ? related product =========== -->
 
     <!-- ? ======= footer =========== -->
     <footer>
