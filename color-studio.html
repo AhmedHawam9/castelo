@@ -310,8 +310,11 @@
             <script>
                 $(document).ready(function () {
                     $('.color-studio .modal .modal-body .chose-color span').click(function () {
-                        $('.color-studio .modal .modal-body .chose-color span.active').removeClass("active");
                         $(this).addClass("active");
+                        $('#exampleModal-1').on('hidden.bs.modal', function () {
+                            // do something…
+                            $('.color-studio .modal .modal-body .chose-color span.active').removeClass("active");
+                        })
                     });
                 });
             </script>
@@ -319,15 +322,18 @@
 
             <!-- ? ======= remove color  =========== -->
             <script>
-
-                $(function () {
+                $(document).ready(function () {
                     let buttonImage = $('.color-studio .color-link .remove');
-                    removeItem = $('.color-studio .chose-color .content');
-                    $(buttonImage).on('click', function () {
-                        $(removeItem).empty();
-                    })
+                    buttonImage.on('click', function () {
+                        removeItem = $('.color-studio .chose-color .content span');
+                        $length = $(removeItem).length;
+                        $(removeItem).map(function (index) {
+                            if (index == $length - 1) {
+                                $(this).remove();
+                            }
+                        });
+                    });
                 });
-
             </script>
             <!-- ? ======= remove color =========== -->
         </div>
