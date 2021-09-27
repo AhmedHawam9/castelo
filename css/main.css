@@ -2985,6 +2985,9 @@ nav .nav-links .dropdown-menu .dropdown-item:hover {
 .blog-colors {
   margin: 5% 0;
 }
+.news-blog a{
+  background-color: #fff !important;
+}
 .blog-news .news {
   text-align: center;
   color: var(--color-secound);
@@ -3104,28 +3107,34 @@ nav .nav-links .dropdown-menu .dropdown-item:hover {
 .color-studio .social-blog a:nth-of-type(1) {
   color: white;
   background-color: #29c5f6;
-  border-radius: 36%;
+  border-radius: 50%;
   padding: 1%;
 }
 .first-blog .social-blog a:nth-of-type(2),
 .color-studio .social-blog a:nth-of-type(2) {
   color: white;
   background-color: #516eaa;
-  border-radius: 36%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   padding: 1%;
 }
 .first-blog .social-blog a:nth-of-type(3),
 .color-studio .social-blog a:nth-of-type(3) {
   color: white;
   background-color: #cd1e20;
-  border-radius: 36%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   padding: 5px;
 }
 .first-blog .social-blog a:nth-of-type(4),
 .color-studio .social-blog a:nth-of-type(4) {
   color: var(--color-secound);
   background-color: white;
-  border-radius: 36%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   padding: 1%;
   border: 1px solid var(--color-secound);
 }
@@ -4373,6 +4382,9 @@ nav .nav-links .dropdown-menu .dropdown-item:hover {
   height: 75px;
   margin: 7px 5px;
 }
+.color-studio .modal .modal-body .chose-color span.active{
+  border: 3px solid var(--bs-info);
+}
 .color-studio .modal .modal-body h6 {
   padding: 20px 0;
   font-family: "semibold";
@@ -5009,7 +5021,7 @@ footer .footer-bottom .my-heart {
     height: 300px;
   }
   .app .features_list {
-    margin: 5% 0;
+    margin: 10% 0;
   }
   .points h3,
   .points p {
@@ -5068,6 +5080,11 @@ footer .footer-bottom .my-heart {
   }
   .color-studio .color-link h6{
     margin: 3% 0;
+  }
+  .app .app_img{
+    width: 50%;
+    margin: 0 auto 5%;
+    display: block;
   }
   footer .col-links ul li {
     margin: 15px auto;
